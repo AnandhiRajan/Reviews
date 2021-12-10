@@ -1,6 +1,13 @@
 #!/bin/bash
 
-num=$
-for ((counter=0;counter<5;counter++))
+echo -n "enter a num"
+read n
+Array=()
+for i in $(seq 1 $n)
 do
-
+ [$(expr $n / $i \*$i) ==$n] Array+($i)
+done
+for value in "{Array[@]}"
+do
+  echo $value
+done
